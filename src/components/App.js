@@ -31,6 +31,9 @@ class App extends Component {
 
     const networkId = await web3.eth.net.getId()
     const networkData = Color.networks[networkId]
+
+    console.log("networkData: "+ networkData);
+
     if(networkData) {
       const abi = Color.abi
       const address = networkData.address

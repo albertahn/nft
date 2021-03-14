@@ -11,7 +11,7 @@ contract Color is ERC721Full {
 
   // E.G. color = "#FFFFFF"
   function mint(string memory _color) public {
-    require(!_colorExists[_color]);
+    require(!_colorExists[_color]); //if color does not exist then execute the code below
     uint _id = colors.push(_color);
     _mint(msg.sender, _id);
     _colorExists[_color] = true;
